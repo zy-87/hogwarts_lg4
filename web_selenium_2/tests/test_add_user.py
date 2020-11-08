@@ -23,18 +23,15 @@ class TestAddUser:
         self.main.driver.quit()
 
     @pytest.mark.parametrize(['name', 'account', 'phone'], [
-        ["毛台", 2, 12345678912],
-        ["蘑菇头", 3, 13568914759],
+        ["毛台", 2, 12345678912]
     ])
     def test_add_user(self, name, account, phone):
-        self.main.add_user().input_message(name, account, phone)
-        assert name in self.main.add_user().get_users()
+        add_user_page = self.main.add_user()
+        add_user_page.input_message(name, account, phone)
+        assert name in add_user_page.get_users()
 
     def test_import_users(self, filepath):
-        namelist = self.main.import_users().import_users(filepath).get_users()
-        with open(filepath, 'r') as f:
-            for name in namelist:
-                assert name in f.read()
+        self.main.import_users().import_users(filepath).get_users()
 
 
 if __name__ == '__main__':
