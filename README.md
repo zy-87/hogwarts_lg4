@@ -6,3 +6,5 @@
 ./web_selenium_1
 ## web自动化测试直播(二)作业
 ./web_selenium_2
+## app自动化测试直播(一)作业
+./app_appium_1
