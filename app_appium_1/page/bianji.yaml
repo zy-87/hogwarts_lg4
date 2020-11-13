@@ -1,0 +1,3 @@
+- by: id
+  locator: b87
+  action: click
