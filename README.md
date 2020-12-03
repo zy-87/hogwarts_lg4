@@ -8,3 +8,5 @@
 ./web_selenium_2
 ## app自动化测试直播(一)作业
 ./app_appium_1
+## 企业微信接口测试实战(一)作业
+./service
